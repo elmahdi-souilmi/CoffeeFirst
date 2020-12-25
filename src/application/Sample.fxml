@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="579.0" prefWidth="865.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+  <tabs>
+    <Tab text="techenicien">
+         <content>
+            <AnchorPane prefHeight="452.0" prefWidth="724.0">
+               <children>
+                  <TableView fx:id="TechenicienTab" layoutX="370.0" prefHeight="540.0" prefWidth="495.0">
+                    <columns>
+                      <TableColumn fx:id="idtech" prefWidth="47.0" text="ID" />
+                      <TableColumn fx:id="nametech" prefWidth="78.0" text="Name" />
+                        <TableColumn fx:id="phonetech" prefWidth="172.0" text="Phone" />
+                        <TableColumn fx:id="idReftech" prefWidth="68.0" text="IdRef" />
+                        <TableColumn fx:id="accCodetech" prefWidth="129.0" text="Accescode" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="65.0" layoutY="103.0" text="id" />
+                  <Label layoutX="57.0" layoutY="176.0" text="Name" />
+                  <Label layoutX="56.0" layoutY="238.0" text="phone" />
+                  <Label layoutX="56.0" layoutY="301.0" prefHeight="21.0" prefWidth="43.0" text="IdRef" />
+                  <Label layoutX="28.0" layoutY="363.0" text="AccesCode" />
+                  <TextField fx:id="idTecnicien" layoutX="112.0" layoutY="98.0" />
+                  <TextField fx:id="NameTecnicien" layoutX="112.0" layoutY="171.0" />
+                  <TextField fx:id="PhoneTecnicien" layoutX="112.0" layoutY="233.0" />
+                  <TextField fx:id="idRefTecnicien" layoutX="112.0" layoutY="296.0" />
+                  <TextField fx:id="AccescodeTecnicien" layoutX="112.0" layoutY="358.0" />
+                  <Button layoutX="168.0" layoutY="417.0" mnemonicParsing="false" onMouseClicked="#AddTechenicienButtonClicked" text="add" />
+               </children>
+            </AnchorPane>
+         </content></Tab>
+      <Tab text="machines">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="MachineTab" layoutX="375.0" layoutY="-1.0" prefHeight="545.0" prefWidth="487.0">
+                     <columns>
+                        <TableColumn fx:id="idmachine" prefWidth="46.0" text="ID" />
+                        <TableColumn fx:id="turnedON" prefWidth="70.0" text="isTurnedOn" />
+                        <TableColumn fx:id="sumchange" prefWidth="79.0" text="SumChange" />
+                        <TableColumn fx:id="listProduct" prefWidth="291.0" text="listProduct" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="37.0" layoutY="60.0" text="id" />
+                  <Label layoutX="36.0" layoutY="127.0" text="isturnedon" />
+                  <Label layoutX="29.0" layoutY="182.0" prefHeight="21.0" prefWidth="87.0" text="sumchange" />
+                  <Label layoutX="14.0" layoutY="255.0" text="AccesCode" />
+                  <TextField fx:id="idMachine" layoutX="144.0" layoutY="55.0" />
+                  <TextField fx:id="IsTurnedOnmachine" layoutX="144.0" layoutY="122.0" />
+                  <TextField fx:id="SumChangemachine" layoutX="144.0" layoutY="177.0" />
+                  <Button layoutX="166.0" layoutY="470.0" mnemonicParsing="false" onMouseClicked="#AddMachineButtonClicked" text="add" />
+                  <ListView fx:id="list1machine" layoutX="123.0" layoutY="248.0" prefHeight="204.0" prefWidth="96.0" />
+                  <ListView fx:id="list2machine" layoutX="263.0" layoutY="248.0" prefHeight="204.0" prefWidth="90.0" />
+                  <Button layoutX="225.0" layoutY="261.0" mnemonicParsing="false" onMouseClicked="#setList2Data" text="&gt;" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="produit">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="ProductTab" layoutX="504.0" prefHeight="544.0" prefWidth="361.0">
+                     <columns>
+                        <TableColumn fx:id="idproduct" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="nameproduct" prefWidth="158.0" text="Name" />
+                        <TableColumn fx:id="priceproduct" prefWidth="127.0" text="price" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="102.0" layoutY="111.0" text="ID" />
+                  <Label layoutX="102.0" layoutY="208.0" text="Name" />
+                  <Label layoutX="102.0" layoutY="297.0" prefHeight="27.0" prefWidth="51.0" text="Price" />
+                  <TextField fx:id="idProduit" layoutX="186.0" layoutY="106.0" />
+                  <TextField fx:id="NameProduit" layoutX="186.0" layoutY="203.0" />
+                  <TextField fx:id="PriceProduit" layoutX="186.0" layoutY="295.0" />
+                  <Button layoutX="186.0" layoutY="404.0" mnemonicParsing="false" onMouseClicked="#AddProductButtonClicked" text="Add" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="client">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="clientTab" layoutX="376.0" prefHeight="543.0" prefWidth="489.0">
+                     <columns>
+                        <TableColumn fx:id="Idclient" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="name" prefWidth="75.0" text="Name" />
+                        <TableColumn fx:id="phone" prefWidth="154.0" text="Phone" />
+                        <TableColumn fx:id="Choice" prefWidth="98.0" text="choice" />
+                        <TableColumn fx:id="Coins" prefWidth="88.0" text="coins" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="44.0" layoutY="85.0" text="ID" />
+                  <Label layoutX="44.0" layoutY="158.0" text="Name" />
+                  <Label layoutX="44.0" layoutY="227.0" text="Phone" />
+                  <Label layoutX="44.0" layoutY="309.0" text="choice" />
+                  <Button layoutX="135.0" layoutY="441.0" mnemonicParsing="false" onMouseClicked="#AddClienButtonClicked" text="ADD" />
+                  <TextField fx:id="idclient" layoutX="106.0" layoutY="80.0" />
+                  <TextField fx:id="nameClient" layoutX="106.0" layoutY="153.0" />
+                  <TextField fx:id="phoneClient" layoutX="106.0" layoutY="222.0" />
+                  <TextField fx:id="choiceClient" layoutX="106.0" layoutY="304.0" />
+                  <Label layoutX="44.0" layoutY="378.0" text="coins" />
+                  <TextField fx:id="coinsClient" layoutX="106.0" layoutY="373.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+    <Tab text="buy">
+         <content>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ComboBox fx:id="listMAchine" layoutX="175.0" layoutY="170.0" prefWidth="150.0" />
+                  <TableView layoutX="407.0" layoutY="-5.0" prefHeight="545.0" prefWidth="458.0">
+                     <columns>
+                        <TableColumn fx:id="idproductbuy" prefWidth="93.0" text="ID" />
+                        <TableColumn fx:id="nameproductbuy" prefWidth="139.0" text="Name" />
+                        <TableColumn fx:id="priceproductbuy" prefWidth="102.0" text="price" />
+                        <TableColumn prefWidth="123.0" text="buy" />
+                     </columns>
+                  </TableView>
+                  <Button layoutX="175.0" layoutY="239.0" mnemonicParsing="false" text="run" />
+                  <Label layoutX="52.0" layoutY="175.0" text="select machine" />
+               </children>
+            </AnchorPane>
+         </content></Tab>
+  </tabs>
+</TabPane>
